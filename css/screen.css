@@ -690,6 +690,15 @@ input::placeholder {
     justify-content: center;
 }
 
+.c-custom-input-option:hover {
+    border-color: var(--color-neutral-x-light);
+}
+
+.c-custom-input-option:focus,
+.c-custom-input-option:active {
+    border: 3px solid #81ADF0;
+}
+
 .c-custom-input-option--checkbox {
     border-radius: 3px;
 }
