@@ -47,7 +47,7 @@
     /* border radius */
     --radius: 3px;
     /* transitions */
-    --transition-alpha: .1s ease-out;
+    --transition-alpha: .2s ease-out;
 }
 
 /*------------------------------------*\
@@ -675,7 +675,7 @@ input::placeholder {
     Custom checkboxes & radio buttons
 */
 .c-custom-input-option__symbol {
-    /* opacity: 0; */
+    opacity: 0;
     display: block;
 }
 
@@ -710,7 +710,13 @@ input::placeholder {
 }
 
 .c-custom-input-option-hidden:checked+.c-custom-input-option-label .c-custom-input-option__symbol {
-    /* fill: blue; */
+    transition: var(--transition-alpha);
+    opacity: 1;
+}
+
+.c-custom-input-option-hidden:not(:checked)+.c-custom-input-option-label .c-custom-input-option__symbol {
+    transition: var(--transition-alpha);
+    opacity: 0;
 }
 
 .c-custom-input-option--checkbox .c-custom-input-option__symbol {
